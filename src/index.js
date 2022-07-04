@@ -128,18 +128,30 @@
  */
 
 // map(for文と同じ役割)
-const nameArr = ["田中", "山田", "安井"];
-// mapで新しい配列を生成
-const nameArr2 = nameArr.map((name) => {
-  return name;
-});
-console.log(nameArr2);
-// ここがfor文と同じ役割
-nameArr.map((name, index) => console.log(`${index + 1}番目は、${name}`));
+// const nameArr = ["田中", "山田", "安井"];
+// // mapで新しい配列を生成
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+// // ここがfor文と同じ役割
+// nameArr.map((name, index) => console.log(`${index + 1}番目は、${name}`));
 
-// filter(条件に合ったものだけを返却)
-const numArr = [1, 2, 3, 4, 5];
-const newNumArr = numArr.filter((num) => {
-  return num % 2 === 1;
-});
-console.log(newNumArr);
+// // filter(条件に合ったものだけを返却)
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+const val1 = 1 > 0 ? "trueです" : "falseです";
+console.log(val1);
+
+const num = 1300;
+const formatedNum =
+  typeof num === "number" ? num.toLocaleString() : "数値の入力をお願いします";
+console.log(formatedNum);
