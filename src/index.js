@@ -72,14 +72,22 @@
  * 分割代入
  *
  */
-const myProfile = {
-  name: "じゃけえ",
-  age: 28
-};
+// const myProfile = {
+//   name: "じゃけえ",
+//   age: 28
+// };
 
-const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
-console.log(message1);
-// ここが分割代入
-const { name, age } = myProfile;
-const message2 = `名前は${name}です。年齢は${age}です。`;
-console.log(message2);
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message1);
+// // ここが分割代入
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
+
+/**
+ * デフォルト値、引数
+ *
+ */
+// name =の後がデフォルト値
+const sayHello = (name = "guest") => console.log(`こんにちは${name}さん！`);
+sayHello("安井");
