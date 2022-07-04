@@ -95,6 +95,7 @@
 /**
  *スプレッド構文 ...を記述するもの
  */
+
 // 配列の展開
 // const arr1 = [1, 2];
 // // console.log(arr1);
@@ -113,11 +114,32 @@
 // console.log(arr3);
 
 // 配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
-// コピー
-const arr6 = [...arr4];
-console.log(arr6);
-// 結合（+でできた配列とはまた別）
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+// // コピー
+// const arr6 = [...arr4];
+// console.log(arr6);
+// // 結合（+でできた配列とはまた別）
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+/**
+ * mapやfilter
+ */
+
+// map(for文と同じ役割)
+const nameArr = ["田中", "山田", "安井"];
+// mapで新しい配列を生成
+const nameArr2 = nameArr.map((name) => {
+  return name;
+});
+console.log(nameArr2);
+// ここがfor文と同じ役割
+nameArr.map((name, index) => console.log(`${index + 1}番目は、${name}`));
+
+// filter(条件に合ったものだけを返却)
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+console.log(newNumArr);
